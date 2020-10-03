@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+    }
+
+    .info {
+      position: absolute;
+      top: 500px;
+      left: 800px;
+      transform: translate(-50%, -50%);
+      background-color: lightgrey;
+      width: 800px;
+      height: 400px;
+      border: 5px solid rgb(13, 92, 17);
+      padding: 50px;
+      margin: 20px;
+    }
+
+    .bg {
+      /* The image used */
+      background-image: url("images/wall.jpg");
+
+      /* Full height */
+      height: 100%;
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .text {
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+  </style>
+</head>
+
+<body onload="typeWriter()">
+
+
+
+  <script>
+    var i = 0;
+    var txt = 'Both astronauts spent about 21 hours and 36 minutes on the lunar surface, two and a half hours exploring the site. They managed to paint a picture with words during that time, describing the area surrounding them and the objects on it. Once they were both firmly walking on the Moon, they decided to mount a commemorative plaque on the Eagle legs. "Here men from the planet Earth first set foot upon the Moon, July 1969 A.D. We came in peace for all mankind." This was the inscribed message from the National Aeronautics and Space Act declaration of policy.Leaving behind an American flag and a patch commemorating the fallen crew of Apollo 1(Virgil I.Grissom, Edward H.White, and Roger B.Chaffee), they returned to Earth on July 24th';
+    var speed = 50;
+
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("demo").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+  </script>
+
+  <div class="bg"></div>
+
+  <div class="info">
+    <p id="demo" class="text"></p>
+  </div>
+
+
+</body>
+
+</html>

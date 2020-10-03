@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+    }
+
+    .bg {
+      /* The image used */
+      background-image: url("images/wall2.jpeg");
+
+      /* Full height */
+      height: 100%;
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    /* Play */
+    .play {
+      position: absolute;
+      top: 573px;
+      left: 920px;
+      transform: translate(-50%, -50%);
+      text-decoration: none;
+    }
+
+    .play1 {
+      position: absolute;
+      top: 692px;
+      left: 887px;
+      transform: translate(-50%, -50%);
+      color: aliceblue;
+      text-decoration: none;
+    }
+
+    .play2 {
+      position: absolute;
+      top: 553px;
+      left: 873px;
+      transform: translate(-50%, -50%);
+      text-decoration: none;
+    }
+
+    .play3 {
+      position: absolute;
+      top: 310px;
+      left: 873px;
+      transform: translate(-50%, -50%);
+      text-decoration: none;
+    }
+  </style>
+  <script type="text/javascript">
+    var imgObj = null;
+    var animate;
+
+    function init() {
+      imgObj = document.getElementById('myImage');
+      imgObj.style.position = 'relative';
+      imgObj.style.left = '0px';
+    }
+
+    function moveRight() {
+      imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+      animate = setTimeout(moveRight, 20);
+    }
+
+    window.onload = init;
+              //-->
+  </script>
+</head>
+
+<body>
+
+  <div class="bg"></div>
+  <a href="gameplay.html">
+    <div>
+      <span class="play2"><img id="myImage" src="images/rocketflame.png" width=300px" height="300px" /></span><img
+        src="images/1.png" width=300px" height="300px" class="play" value="Start"
+        onclick="setTimeout(5000);moveRight();">
+    </div>
+  </a>
+
+  <div class="play1">
+    <h4>Click the space rocket to start your journey in the world of Nasa</h4>
+  </div>
+
+  <!--Animated Form-->
+  <hide>
+    <form>
+      <div class="play2"></div>
+    </form>
+  </hide>
+
+  <div>
+    <img src="images/logo1.png" class="play3">
+  </div>
+
+</body>
+
+</html>

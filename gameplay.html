@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body,
+		html {
+			height: 100%;
+			margin: 0;
+		}
+
+		.bg {
+			/* The image used */
+			background-image: url("images/stars_bg.jpeg");
+
+			/* Full height */
+			height: 100%;
+
+			/* Center and scale the image nicely */
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		.earth {
+			position: absolute;
+			top: 110%;
+			left: 60%;
+			transform: translate(-50%, -50%);
+			text-decoration: none;
+		}
+
+		.planet1 {
+			position: absolute;
+			top: 48%;
+			left: 49%;
+			transform: translate(-50%, -50%);
+			text-decoration: none;
+		}
+
+		.planet2 {
+			position: absolute;
+			top: 10%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-decoration: none;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="bg"></div>
+
+	<a href="infopage1.html">
+		<div>
+			<img src="images/earth.png" class="earth" width="650px" height="650px" alt="">
+		</div>
+	</a>
+
+	<a href="infopage2.html">
+		<div>
+			<img src="images/planet2.png" class="planet1" width="650px" height="650px" alt="">
+		</div>
+
+		<a href="infopage3.html">
+			<div>
+				<img src="images/planet1.png" class="planet2" width="650px" height="650px" alt="">
+			</div>
+		</a>
+</body>
+
+</html>
